@@ -20,16 +20,12 @@ Dillinger uses a number of open source projects to work properly:
 
 ## Installation
 
-Dillinger requires [Node.js](https://nodejs.org/) v10+ to run.
-
-Install the dependencies and devDependencies and start the server.
-
 ```sh
 git clone https://github.com/cyberdevo/Ads_Management.git
 
 Either you can use built in exe file
 ```
-### Solar System Exploration, 1950s – 1960s
+### Task ToDo
 
 - [x] Ads Manipulation
 - [x] Make Anti Ads Boom
