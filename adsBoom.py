@@ -9,18 +9,18 @@ class AdsSecurity:
      
     def providing_security(self): 
         print(self.get_alldrives)
-        for drive in self.get_alldrives:
-            for root,subdir,files in os.walk(drive):
-                for file in files:
-                    filepath = os.path.join(root,file)
-                    self.file_path_li.append(filepath)
-                    try:
-                        for i in range(2):
-                            file_ext = os.path.join(filepath + str(i))
-                            if fnmatch.fnmatch(file_ext,'*.*'+ str(i)):
-                                self.ext_file_path.append(file_ext)
-                    except:
-                        pass
+        # for drive in self.get_alldrives:
+        for root,subdir,files in os.walk(os.getcwd()):
+            for file in files:
+                filepath = os.path.join(root,file)
+                self.file_path_li.append(filepath)
+                try:
+                    for i in range(2):
+                        file_ext = os.path.join(filepath + str(i))
+                        if fnmatch.fnmatch(file_ext,'*.*'+ str(i)):
+                            self.ext_file_path.append(file_ext)
+                except:
+                    pass
     
     def check_caller(self,callfrom):
         try:
@@ -32,7 +32,6 @@ class AdsSecurity:
                             shutil.copyfile(file_,ext_file)
                         elif callfrom == "add_more_secure":
                             subprocess.Popen(f"type {ext_file} > {file_}:{os.path.basename(ext_file)}",shell=True)
-
 
         except:
             pass
@@ -46,17 +45,17 @@ class AdsSecurity:
         self.check_caller(callfrom)
 
     def remove_file(self):
-        for drive in self.get_alldrives:
-            for root,subdir,files in os.walk(drive):
-                for file in files:
-                    filepath = os.path.join(root,file)
-                    try:
-                        for i in range(2):
-                            if fnmatch.fnmatch(filepath,'*.*'+ str(i)):
-                                os.remove(filepath)
-                                print("file removoing %s....")
-                    except:
-                        pass
+        # for drive in self.get_alldrives:
+        for root,subdir,files in os.walk(os.getcwd()):
+            for file in files:
+                filepath = os.path.join(root,file)
+                try:
+                    for i in range(2):
+                        if fnmatch.fnmatch(filepath,'*.*'+ str(i)):
+                            os.remove(filepath)
+                            print("file removoing %s....")
+                except:
+                    pass 
 
 
 if __name__ == "__main__":
