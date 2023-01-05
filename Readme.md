@@ -1,11 +1,11 @@
 # ADS Boom 
 ##### _Data Fillar_ 
 
-Alternate Data Stream Manipulation in Python Just for filling drives with data and user in unable to check that where the data is added
+ADS Manipulations in Python Just for filling drives with bunch of data and user will unable to check that where the data is added!!!
 
 - Quitely adds Data 
 - Removes the dump files 
-- ✨Magic ✨ is occured
+- Fill the Hard drives
 
 ## Features
 
